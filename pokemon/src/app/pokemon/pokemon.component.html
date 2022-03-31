@@ -1,0 +1,8 @@
+<div class="main-container">
+    <div class="pokemon-container" *ngFor="let pokemon of pokemonList">
+        <app-pokemon-card 
+            [pokemonCard]="pokemon" *ngIf="show || pokemon.name === chosenPokemon"
+        ></app-pokemon-card>
+    </div>
+    <button *ngIf="!show" (click)="onGoBack()">Go Back</button>
+</div>

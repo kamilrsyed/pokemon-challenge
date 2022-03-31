@@ -1,0 +1,15 @@
+<div class="card-container">
+    <mat-card class="pokemon-card" (click)="selectPokemon(pokemonCard.species.name)">
+        <div class="header">
+            <mat-card-header>
+                <mat-card-title>{{ pokemonCard.species.name }}</mat-card-title>
+                <mat-card-subtitle>id# {{ pokemonCard.id }}</mat-card-subtitle>
+            </mat-card-header>
+        </div>
+        <img mat-card-image src="{{ pokemonCard.sprites.other.dream_world.front_default }}" alt="Photo of a pokemon">
+        <mat-card-content>
+            <p>height: {{ pokemonCard.height }}</p>
+            <p>weight: {{ pokemonCard.weight }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
